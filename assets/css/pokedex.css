@@ -1,3 +1,8 @@
+.title {
+    text-align: center;
+    position: relative;
+    color: #678fee;
+}
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,12 +143,39 @@
 
 .pagination button {
     padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
+    margin: 50px;
+    font-size: 15px;
     color: #fff;
-    background-color: #6c79db;
+    background-color: #42ad50;
     border: none;
-    border-radius: 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pagination button span {
+    position: relative;
+    transition: 0.5s;
+}
+
+.pagination button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.pagination button:hover span {
+    padding-right: 25px;
+}
+
+.pagination button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 @media screen and (min-width: 380px) {
